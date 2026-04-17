@@ -102,8 +102,67 @@
     <input type="text" id="productSearch" placeholder="Buscar fragancia o diseñador...">
 </div>
 
+
 <div class="catalog-container">
     <div id="noResults" class="no-results">No se encontraron fragancias que coincidan.</div>
+
+
+
+
+
+<section class="gender-category">
+        <div class="gender-header">Publicidad</div>
+
+<style>
+    .promo-banner {
+        width: 100%;
+        padding: 20px 0 40px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .video-container {
+        width: 95%;            /* Margen responsivo para móviles */
+        max-width: 1200px;     /* Límite exacto de tus secciones de productos */
+        aspect-ratio: 10 / 5;  /* Proporción solicitada */
+        margin: 0 auto;
+        background: #000;
+        overflow: hidden;
+        border-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    #promoVideo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;     /* Ajusta el video al recuadro sin deformarlo */
+        display: block;
+    }
+</style>
+
+<section class="promo-banner">
+    <div class="video-container">
+        <video id="promoVideo" controls autoplay muted loop playsinline></video>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+    (function() {
+        var video = document.getElementById('promoVideo');
+        var videoSrc = 'https://slimages.macysassets.com/is/content/MacysInc/1771683221570-AVS.m3u8?packagedStreaming=true';
+
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoSrc;
+        }
+    })();
+</script>
+
+
 
     <section class="gender-category">
         <div class="gender-header">Fragancias Unisex</div>
