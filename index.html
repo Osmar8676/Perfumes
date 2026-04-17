@@ -362,6 +362,28 @@
     <section class="gender-category">
         <div class="gender-header">Fragancias para Ella</div>
         
+        <div class="designer-group" data-designer="Calvin Klein">
+            <h3 class="designer-name">Calvin Klein</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.271.2x.avif"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_271.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">100 ml • Mujer</span>
+                        <h2 class="product-name">Escape</h2>
+                        <span class="price-tag">$25</span>
+                        <p class="description">Floral Acuática (1991). Melón, manzanilla y caléndula con un corazón de durazno y rosa, sobre un fondo de musgo de roble y sándalo.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20perfume%20Escape" class="btn-laiana">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="designer-group" data-designer="Carolina Herrera">
             <h3 class="designer-name">Carolina Herrera</h3>
             <div class="products-grid">
@@ -566,6 +588,28 @@
     <section class="gender-category">
         <div class="gender-header">Fragancias para Él</div>
         
+        <div class="designer-group" data-designer="Azzaro">
+            <h3 class="designer-name">Azzaro</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.90953.2x.avif"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_90953.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">100 ml • Hombre</span>
+                        <h2 class="product-name">The Most Wanted Intense</h2>
+                        <span class="price-tag">$32</span>
+                        <p class="description">Amaderada Aromática (2024). Notas de salida de bergamota, corazón de lavanda y fondo de licor y musgo.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20perfume%20The%20Most%20Wanted%20Intense" class="btn-laiana">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="designer-group" data-designer="Bharara">
             <h3 class="designer-name">Bharara</h3>
             <div class="products-grid">
@@ -603,7 +647,7 @@
                         <span class="meta-tag">100 ml • Hombre</span>
                         <h2 class="product-name">Ultra Male</h2>
                         <span class="price-tag">$32</span>
-                        <p class="description">Oriental Fougère (2015). Pera, lavanda y menta con un corazón de canela y fondo de vainilla negra, ámbar y pachulí.</p>
+                        <p class="description">Oriental Fougère (2015). Pera, lavanda y menta con un corazón de canela y fondo de vainilla negra, ámber y pachulí.</p>
                         <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20perfume%20Ultra%20Male" class="btn-laiana">Solicitar</a>
                     </div>
                 </div>
@@ -751,6 +795,22 @@
                         <span class="price-tag">$30</span>
                         <p class="description">Aromática Acuática (2024). Notas marinas, lavanda y jabón.</p>
                         <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20perfume%20Invictus%20Parfum" class="btn-laiana">Solicitar</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.37698.2x.avif"></div>
+                            <div class="swiper-slide"><img src="https://fimgs.net/mdimg/perfume-social-cards/es-p_c_37698.jpeg"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="product-details">
+                        <span class="meta-tag">100 ml • Hombre</span>
+                        <h2 class="product-name">One Million Privé</h2>
+                        <span class="price-tag">$30</span>
+                        <p class="description">Oriental Amaderada (2016). Canela y mandarina roja con un corazón de tabaco y mirra, sobre un fondo de haba tonka y pachulí.</p>
+                        <a href="https://wa.me/593985301767?text=Hola%20Laïana%20Perfumería,%20solicito%20información%20y%20disponibilidad%20del%20perfume%20One%20Million%20Privé" class="btn-laiana">Solicitar</a>
                     </div>
                 </div>
             </div>
@@ -1037,15 +1097,27 @@
 
         cards.forEach(card => {
             const name = card.querySelector('.product-name').textContent.toLowerCase();
-            const designer = card.closest('.designer-group').getAttribute('data-designer').toLowerCase();
+            const designerGroup = card.closest('.designer-group');
+            const designer = designerGroup ? designerGroup.getAttribute('data-designer').toLowerCase() : "";
+            
             if (name.includes(term) || designer.includes(term)) {
                 card.style.display = 'flex';
                 totalVisible++;
-            } else { card.style.display = 'none'; }
+            } else { 
+                card.style.display = 'none'; 
+            }
         });
 
-        groups.forEach(g => { g.style.display = g.querySelectorAll('.product-card[style="display: flex;"]').length > 0 ? 'block' : 'none'; });
-        sections.forEach(s => { s.style.display = s.querySelectorAll('.product-card[style="display: flex;"]').length > 0 ? 'block' : 'none'; });
+        groups.forEach(g => { 
+            const hasVisibleCards = g.querySelectorAll('.product-card[style="display: flex;"]').length > 0;
+            g.style.display = hasVisibleCards ? 'block' : 'none'; 
+        });
+
+        sections.forEach(s => { 
+            const hasVisibleCards = s.querySelectorAll('.product-card[style="display: flex;"]').length > 0;
+            s.style.display = hasVisibleCards ? 'block' : 'none'; 
+        });
+
         document.getElementById('noResults').style.display = totalVisible === 0 ? 'block' : 'none';
     });
 </script>
