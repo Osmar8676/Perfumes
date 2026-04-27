@@ -107,6 +107,12 @@
     <div id="noResults" class="no-results">No se encontraron fragancias que coincidan.</div>
 
 
+
+
+
+
+
+
 <style>
     .promo-banner {
         width: 100%;
@@ -144,7 +150,7 @@
 <script>
     (function() {
         var video = document.getElementById('promoVideo');
-        var videoSrc = 'https://slimages.macysassets.com/is/content/MacysInc/1771683221570-AVS.m3u8?packagedStreaming=true';
+        var videoSrc = 'https://slimages.macysassets.com/is/content/MacysInc/6373247601112-AVS.m3u8?packagedStreaming=true';
 
         if (Hls.isSupported()) {
             var hls = new Hls();
@@ -155,6 +161,13 @@
         }
     })();
 </script>
+
+
+
+
+
+
+
 
 
 
@@ -574,7 +587,42 @@
         </div>
     </section>
 
-    <section class="gender-category">
+    
+
+
+
+
+
+
+<section class="promo-banner">
+    <div class="video-container">
+        <video id="promoVideoElla" controls autoplay muted loop playsinline></video>
+    </div>
+</section>
+
+<script>
+    (function() {
+        var video = document.getElementById('promoVideoElla');
+        var videoSrc = 'https://slimages.macysassets.com/is/content/MacysInc/1771683221570-AVS.m3u8?packagedStreaming=true';
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoSrc;
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+<section class="gender-category">
         <div class="gender-header">Fragancias para Ella</div>
         
         <div class="designer-group" data-designer="Calvin Klein">
@@ -1533,7 +1581,44 @@
 </div>
     </section>
 
-    <section class="gender-category">
+   
+
+
+
+
+
+
+
+<section class="promo-banner">
+    <div class="video-container">
+        <video id="promoVideoEl" controls autoplay muted loop playsinline></video>
+    </div>
+</section>
+
+<script>
+    (function() {
+        var video = document.getElementById('promoVideoEl');
+        var videoSrc = 'https://slimages.macysassets.com/is/content/MacysInc/4492902066001-AVS.m3u8?packagedStreaming=true';
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoSrc;
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+
+
+ <section class="gender-category">
         <div class="gender-header">Fragancias para Él</div>
         
         <div class="designer-group" data-designer="Azzaro">
